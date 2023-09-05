@@ -1,56 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+
+{{>head}}
+
 <body>
-  <form action="/register" method="POST">
-  <!-- Name input -->
-  <div class="form-outline mb-4">
-    <input type="text" id="form2Example1" name="fullname" class="form-control" />
-    <label class="form-label" for="form2Example1">Name</label>
+  <div class="register">
+    <div class="form">
+      <center><h1>Register</h1></center>
+      <form action="/register" method="POST">
+        <div class="sec">
+          <div class="name">
+            {{!-- <label for="name">Full Name</label> --}}
+            <input type="text" name="fullname" placeholder="Full Name" id="name" required>
+          </div>
+          <div class="email">
+            {{!-- <label for="email">Enter Email</label> --}}
+            <input type="email" placeholder="Enter Email" name="email" id="email" required>
+          </div>
+        </div>
+
+        <div class="sec">
+          <div class="name">
+            {{!-- <label for="Phone Number">Phone Number</label> --}}
+            <input type="text" name="phoneno" id="name" placeholder="Enter your Phone Number" required>
+          </div>
+          <div class="age">
+            {{!-- <label for="age">Your Age</label> --}}
+            <input type="number" name="age" id="name" placeholder="Enter your age" required>
+          </div>
+        </div>
+
+        <div class="sec">
+          <div class="password">
+            {{!-- <label for="password">Password</label> --}}
+            <input type="password" name="password" id="name" placeholder="Enter your Password" required>
+          </div>
+          <div class="Confirm password">
+            {{!-- <label for="confirmpassword">Confirm Password</label> --}}
+            <input type="password" name="confirmpassword" id="name" placeholder="Enter your confirmpassword" required>
+          </div>
+        </div>
+
+        <div class="account-login">
+          <a href="/login">already have account</a>
+        </div>
+        <div class="Confirm password">
+          <input type="Submit" name="submit" class="btn" value="Register">
+        </div>
+      </form>
+    </div>
   </div>
-  
-  <!-- Email input -->
-  <div class="form-outline mb-4">
-    <input type="email" id="form2Example1" name="email" class="form-control" />
-    <label class="form-label" for="form2Example1">Email address</label>
-  </div>
-  
-  <div class="form-outline mb-4">
-    <input type="number" id="form2Example1" name="phoneno" class="form-control" />
-    <label class="form-label" for="form2Example1">Phone Number</label>
-  </div>
-  
-  
-  <!-- age input -->
-  <div class="form-outline mb-4">
-    <input type="number" id="form2Example1" name="age" class="form-control" />
-    <label class="form-label" for="form2Example1">Age</label>
-  </div>
+  {{!-- <form action="/register" method="POST">
+    <!-- Name input -->
+    <div class="form-outline mb-4">
+      <input type="text" id="form2Example1" name="fullname" class="form-control" />
+      <label class="form-label" for="form2Example1">Name</label>
+    </div>
+
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+      <input type="email" id="form2Example1" name="email" class="form-control" />
+      <label class="form-label" for="form2Example1">Email address</label>
+    </div>
+
+    <div class="form-outline mb-4">
+      <input type="number" id="form2Example1" name="phoneno" class="form-control" />
+      <label class="form-label" for="form2Example1">Phone Number</label>
+    </div>
+
+
+    <!-- age input -->
+    <div class="form-outline mb-4">
+      <input type="number" id="form2Example1" name="age" class="form-control" />
+      <label class="form-label" for="form2Example1">Age</label>
+    </div>
 
 
 
-  <!-- Password input -->
-  <div class="form-outline mb-4">
-    <input type="password" id="form2Example2" name="password" class="form-control" />
-    <label class="form-label" for="form2Example2">Password</label>
-  </div>
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <input type="password" id="form2Example2" name="password" class="form-control" />
+      <label class="form-label" for="form2Example2">Password</label>
+    </div>
 
 
-  <!-- Password input -->
-  <div class="form-outline mb-4">
-    <input type="password" id="form2Example2" name="confirmpassword" class="form-control" />
-    <label class="form-label" for="form2Example2">Password</label>
-  </div>
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <input type="password" id="form2Example2" name="confirmpassword" class="form-control" />
+      <label class="form-label" for="form2Example2">Password</label>
+    </div>
 
 
-  <!-- Submit button -->
-  <button type="submit" class="btn btn-primary btn-block mb-4" value="Register">Sign Up</button>
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4" value="Register">Sign Up</button>
 
-  
-</form>
+
+  </form> --}}
 </body>
+
 </html>

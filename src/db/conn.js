@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
-const db = 'mongodb+srv://login:login123@cluster0.bfqkrok.mongodb.net/login?retryWrites=true&w=majority'
-
-mongoose.connect(db).then(()=>{
+const db = mongoose.connect(process.env.DATABASE_DB).then(()=>{
     console.log("connection successful");
 }).catch((e)=>{
     console.log("no connection");
 })
+
+module.exports = db;
